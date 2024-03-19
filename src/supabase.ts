@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient, type User } from '@supabase/supabase-js'
 import { ref } from 'vue'
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
@@ -9,7 +9,7 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 // @ts-ignore
 globalThis.supabase = supabase
 
-export const user = ref(null);
+export const user = ref<User | null>(null);
 async function fetchUser() {
     const { data } = await supabase.auth.getUser();
     user.value = data.user;
