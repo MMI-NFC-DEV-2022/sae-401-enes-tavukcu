@@ -25,6 +25,7 @@
           <RouterLink to="/" class="text-white hover:text-gray-300">Accueil</RouterLink>
           <RouterLink to="/films" class="text-white hover:text-gray-300">Films</RouterLink>
           <RouterLink to="/celebrite" class="text-white hover:text-gray-300">Célébrités</RouterLink>
+          <RouterLink to="/films/edit/" class="text-white hover:text-gray-300">Ajouter un film</RouterLink>
           <RouterLink to="/login-logout" class="text-white hover:text-gray-300">Connexion</RouterLink>
         </div>
       </div>

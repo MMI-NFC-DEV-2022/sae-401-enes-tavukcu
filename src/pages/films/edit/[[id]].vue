@@ -6,13 +6,13 @@ import { supabase } from "@/supabase";
 import { useRouter, useRoute } from "vue-router";
 const router = useRouter();
 const films = ref({});
-const route = useRoute('/films/un_film/[[id]]');
+const route = useRoute('/films/edit/[[id]]');
 async function upsertFilm(dataForm: any, node: { setErrors: (arg0: any[]) => void; }) {
-    const { data, error } = await supabase.from("Films").upsert(dataForm).select("id");
+    const { data, error } = await supabase.from("films").upsert(dataForm).select("id");
     if (error) node.setErrors([error.message])
     else {
         console.log("data :", data);
-        router.push({ name: "/films/un_film/[[id]]", params: { id: data[0].id } });
+        router.push({ name: "/films/edit/[[id]]", params: { id: data[0].id } });
     }
 }
 if (route.params.id) {
@@ -24,7 +24,7 @@ if (route.params.id) {
 
 <template>
     <div>
-        <div class="p-2">
+        <div class="pt-20">
             <h2 class="text-2xl">
                 Résultat (Prévisualisation)
             </h2>
@@ -38,10 +38,10 @@ if (route.params.id) {
                     outer: 'py-2',
                 },
             }">
-                <FormKit name="nom_film" label="Titre du film" />
-                <FormKit name="description_film" label="Description du film" />
-                <FormKit name="note_film" type="number" label="Note /5" />
-                <FormKit name="image_film" label="Images du film" />
+                <FormKit name="titre" label="Titre du film" />
+                <FormKit name="synopsis" label="Description du film" />
+                <FormKit name="note" type="number" label="Note /5" />
+                <FormKit name="affiche" label="Images du film" />
             </FormKit>
         </div>
     </div>

@@ -44,8 +44,11 @@ const route = useRoute('/celebrite/[id]');
                 <p class="text-l "><b>Date de sortie : </b>{{ date_sortie }}</p>
                 <p class="text-l "><b>Durée : </b>{{ duree }} minutes</p>
                 <p v-for="film_realisateur in realisateur">
-                    <RouterLink :to="{ name: '/realisateur/[id]', params: { id: film_realisateur.id } }">
-                       <b> Réalisateur : </b> {{ film_realisateur.prenom }} {{ film_realisateur.nom }}
+
+                    <b> Réalisateur : </b>
+                    <RouterLink :to="{ name: '/realisateur/[id]', params: { id: film_realisateur.id } }"> <em
+                            class="text-blue-600 hover:underline">{{ film_realisateur.prenom }} {{
+        film_realisateur.nom }}</em>
                     </RouterLink>
                 </p>
                 <p class="lg:text-l text-justify"><b>Synopsis :</b><br> {{ synopsis }}</p>
@@ -61,7 +64,7 @@ const route = useRoute('/celebrite/[id]');
 
                 <p v-for="film_saga in saga">
                     <RouterLink :to="{ name: '/saga/[id]', params: { id: film_saga.id } }">
-                        <b>Saga : </b> <em class="text-blue-600">{{ film_saga.libelle }}</em>
+                        <b>Saga : </b> <em class="text-blue-600 hover:underline">{{ film_saga.libelle }}</em>
                     </RouterLink>
                 </p>
             </div>

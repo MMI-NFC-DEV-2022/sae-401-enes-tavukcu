@@ -383,6 +383,7 @@ export type Database = {
           nom: string
           pays: string | null
           prenom: string | null
+          image: string | null
         }
         Insert: {
           age?: number | null
@@ -391,6 +392,7 @@ export type Database = {
           nom: string
           pays?: string | null
           prenom?: string | null
+          image?: string | null
         }
         Update: {
           age?: number | null
@@ -399,6 +401,7 @@ export type Database = {
           nom?: string
           pays?: string | null
           prenom?: string | null
+          image?: string | null
         }
         Relationships: []
       }
