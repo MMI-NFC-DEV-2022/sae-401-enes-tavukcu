@@ -36,8 +36,8 @@ const tableauCelebrite = celebrite ?? [];
 
     <h1 class="text-center text-l lg:text-3xl font-bold py-8">Célébrités</h1>
 
-    <div class="px-20 flex justify-center ">
-        <div class="grid grid-cols-2 lg:grid-cols-5 gap-5">
+    <div class="lg:px-20 flex justify-center ">
+        <div class="grid grid-cols-2 lg:grid-cols-5 lg:gap-5">
             <AfficheCelebrite v-for="celebrite in tableauCelebrite" v-bind="celebrite" />
 
         </div>
