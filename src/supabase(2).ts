@@ -34,8 +34,8 @@ export type Database = {
           image: string | null
           nb_films: number | null
           nom: string
-          prenom: string | null
           pays: string | null
+          prenom: string | null
         }
         Insert: {
           age?: number | null
@@ -43,8 +43,8 @@ export type Database = {
           image?: string | null
           nb_films?: number | null
           nom: string
-          prenom?: string | null
           pays?: string | null
+          prenom?: string | null
         }
         Update: {
           age?: number | null
@@ -52,8 +52,8 @@ export type Database = {
           image?: string | null
           nb_films?: number | null
           nom?: string
-          prenom?: string | null
           pays?: string | null
+          prenom?: string | null
         }
         Relationships: []
       }
@@ -88,7 +88,6 @@ export type Database = {
             referencedRelation: "films"
             referencedColumns: ["id"]
           },
-          
         ]
       }
       film_celebrite: {
@@ -405,14 +404,17 @@ export type Database = {
       }
       saga: {
         Row: {
+          banner: string | null
           id: number
           libelle: string
         }
         Insert: {
+          banner?: string | null
           id?: number
           libelle: string
         }
         Update: {
+          banner?: string | null
           id?: number
           libelle?: string
         }

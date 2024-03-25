@@ -27,7 +27,7 @@ const route = useRoute('/celebrite/[id]');
         </div> -->
             <div class="px-4 space-y-4">
                 <div class="flex items-end ">
-                    <p>Note : </p>
+                    <p><b>Note : </b></p>
                     <div v-for="n in note ?? 0" class="text-white">
                         <svg class="w-5 h-5 fill-current text-yellow-500" viewBox="0 0 24 24">
                             <path
@@ -41,18 +41,18 @@ const route = useRoute('/celebrite/[id]');
                         </svg>
                     </div>
                 </div>
-                <p class="text-l ">Date de sortie : {{ date_sortie }}</p>
-                <p class="text-l ">Durée : {{ duree }} minutes</p>
+                <p class="text-l "><b>Date de sortie : </b>{{ date_sortie }}</p>
+                <p class="text-l "><b>Durée : </b>{{ duree }} minutes</p>
                 <p v-for="film_realisateur in realisateur">
                     <RouterLink :to="{ name: '/realisateur/[id]', params: { id: film_realisateur.id } }">
-                        Réalisateur : {{ film_realisateur.prenom }} {{ film_realisateur.nom }}
+                       <b> Réalisateur : </b> {{ film_realisateur.prenom }} {{ film_realisateur.nom }}
                     </RouterLink>
                 </p>
-                <p class="lg:text-l text-justify">Synopsis : {{ synopsis }}</p>
+                <p class="lg:text-l text-justify"><b>Synopsis :</b><br> {{ synopsis }}</p>
 
 
                 <div class="flex">
-                    <p>Genre : </p>
+                    <p><b>Genre : </b></p>
                     <p v-for="(film_genre, index) in genre" :key="index" class="pl-2">
                         {{ film_genre.libelle }}
                         <span v-if="index < genre.length - 1"> / </span>
@@ -61,7 +61,7 @@ const route = useRoute('/celebrite/[id]');
 
                 <p v-for="film_saga in saga">
                     <RouterLink :to="{ name: '/saga/[id]', params: { id: film_saga.id } }">
-                        Saga : {{ film_saga.libelle }}
+                        <b>Saga : </b>{{ film_saga.libelle }}
                     </RouterLink>
                 </p>
             </div>
