@@ -44,7 +44,7 @@ const route = useRoute('/celebrite/[id]');
                 <p class="text-l "><b>Date de sortie : </b>{{ date_sortie }}</p>
                 <p class="text-l "><b>Durée : </b>{{ duree }} minutes</p>
                 <p v-for="film_variant in variants">
-                    <b>Saga : </b> {{ film_variant.type }}
+                    <b>Variants : </b> {{ film_variant.type }}
                 </p>
 
                 <p v-for="film_realisateur in realisateur">
