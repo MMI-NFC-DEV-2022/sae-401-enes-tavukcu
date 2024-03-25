@@ -27,6 +27,6 @@ console.log("donnee saga", saga);
 <template>
     <div v-if="error">Erreur : {{ error.message }}</div>
     <div v-else>
-        <AfficheSaga v-bind="saga" />
+        <AfficheSaga v-bind="saga" class="pb-6" />
     </div>
 </template>
