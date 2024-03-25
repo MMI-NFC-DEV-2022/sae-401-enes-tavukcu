@@ -28,7 +28,7 @@ const tableauCelebrite = celebrite ?? [];
     <div class="relative">
         <img src="https://img.freepik.com/photos-gratuite/statuette-oscar-film-pop-corn_23-2147699798.jpg?t=st=1711139552~exp=1711143152~hmac=a38fa7551f897663a45215eba251a8524ece480e62324fc9aaaad2b72a69ea24&w=1060"
             alt="
-            Banner Image" class="w-full h-96 object-cover">
+            Banner Image" class="w-full lg:h-96 h-72 object-cover">
 
         <!-- Filtre sombre -->
         <div class="absolute inset-0 bg-black opacity-60"></div>

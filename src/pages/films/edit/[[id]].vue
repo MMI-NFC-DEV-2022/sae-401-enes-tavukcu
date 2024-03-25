@@ -4,8 +4,9 @@ import AfficheFilm from "@/components/AfficheFilm.vue";
 import { FormKit } from "@formkit/vue";
 import { supabase } from "@/supabase";
 import { useRouter, useRoute } from "vue-router";
+import type { Database, Tables } from "@/supabase(2)";
 const router = useRouter();
-const films = ref({});
+const films = ref<Partial<Tables<'films'>>>({});
 const route = useRoute('/films/edit/[[id]]');
 async function upsertFilm(dataForm: any, node: { setErrors: (arg0: any[]) => void; }) {
     const { data, error } = await supabase.from("films").upsert(dataForm).select("id");

@@ -4,7 +4,7 @@ import type { Database, Tables } from '@/supabase(2)';
 // import type { TypesFilm } from '@/types';
 // defineProps<TypesFilm>();
 import { supabase } from '@/supabase';
-defineProps <Database["public"]["Tables"]["films"]["Row"] & {celebrite:Tables<'celebrite'>[]} & {genre:Tables<'genre'>[]}  & {saga:Tables<'saga'>[]}>()
+defineProps <Database["public"]["Tables"]["films"]["Insert"] & {celebrite:Tables<'celebrite'>[]} & {genre:Tables<'genre'>[]}  & {saga:Tables<'saga'>[]}>()
 
 </script>
 
