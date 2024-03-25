@@ -11,11 +11,11 @@ defineProps <Database["public"]["Tables"]["films"]["Row"] & {celebrite:Tables<'c
 <template>
     <RouterLink :to="`/films/${id}`">
         <!-- <RouterLink :to="{name:'/films/[id]', params: {id}}"> -->
-        <div class="w-72 bg-gray-950 rounded-xl overflow-hidden transform transition-transform hover:scale-105">
-            <img :src="affiche ?? undefined" class="w-72 h-96 object-cover" alt="affiche du film" />
+        <div class="lg:w-72 w-52 bg-gray-950 rounded-xl overflow-hidden transform transition-transform hover:scale-105">
+            <img :src="affiche ?? undefined" class="lg:w-72 lg:h-96 w-52 h-72 object-cover" alt="affiche du film" />
             <div class="flex">
-                <p class="text-l pt-2 pl-2 text-white">{{ titre }}</p>
-                <p class="pt-2 pl-3 text-white"> ({{ date_sortie }})</p>
+                <p class="lg:text-l text-sm pt-2 pl-2 text-white">{{ titre }}</p>
+                <p class="text-sm pt-2 pl-3 text-white"> ({{ date_sortie }})</p>
             </div>
             <div class="flex pl-2 pb-2">
                 <div v-for="n in note ?? 0" class="text-white">

@@ -25,7 +25,7 @@ const route = useRoute('/celebrite/[id]');
             <!-- <div class="">
         <img :src="affiche" class="w-auto pl-4"/>
         </div> -->
-            <div class="pl-4 space-y-4">
+            <div class="px-4 space-y-4">
                 <div class="flex items-end ">
                     <p>Note : </p>
                     <div v-for="n in note ?? 0" class="text-white">
@@ -48,7 +48,7 @@ const route = useRoute('/celebrite/[id]');
                         Réalisateur : {{ film_realisateur.prenom }} {{ film_realisateur.nom }}
                     </RouterLink>
                 </p>
-                <p class="text-l">Synopsis : {{ synopsis }}</p>
+                <p class="lg:text-l text-justify">Synopsis : {{ synopsis }}</p>
 
 
                 <div class="flex">
@@ -75,7 +75,7 @@ const route = useRoute('/celebrite/[id]');
 
             <h2 class="text-2xl text-center py-5 mx-4 font-bold ">Casting</h2>
 
-            <ul class="grid lg:grid-cols-5 sm:grid-cols-2">
+            <ul class="grid lg:grid-cols-5 grid-cols-2 sm:grid-cols-3">
                 <li class="m-4 " v-for="uneCelebrite in celebrite">
                     <RouterLink :to="{ name: '/celebrite/[id]', params: { id: uneCelebrite.id } }">
                         <img :src="uneCelebrite?.image ?? undefined"

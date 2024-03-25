@@ -13,7 +13,7 @@ defineProps <Database["public"]["Tables"]["celebrite"]["Row"] & {celebrite:Table
         <!-- <RouterLink :to="{name:'/films/[id]', params: {id}}"> -->
         <div class="w-40 ">
 
-            <img :src="image ?? undefined" class="rounded-full h-40 object-cover  w-40  border-2 border-gray-400"
+            <img :src="image ?? undefined" class="rounded-full m-auto object-cover w-24 h-24 lg:w-40 lg:h-40  border-2 border-gray-400"
                 alt="affiche du film" />
 
             <p class="text-sm pt-2 pl-2 text-center font-semibold">{{ prenom }} {{ nom }}</p>
