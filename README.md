@@ -54,6 +54,7 @@ Page Ajouter des Films
 [URL ajout film](https://filmet.enestavukcu.fr/films/edit/)
 Fonctionnalités:
 Formulaire pour ajouter manuellement des films dans la base de données
+Il faut être connecté pour pouvoir ajouter des films
 
 Page d'une saga
 [URL d'une saga](https://filmet.enestavukcu.fr/saga/1)
