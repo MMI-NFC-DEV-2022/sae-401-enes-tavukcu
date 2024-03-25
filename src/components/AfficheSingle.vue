@@ -18,7 +18,7 @@ const route = useRoute('/celebrite/[id]');
 
 <template>
     <img :src="banner ?? undefined" class="w-full h-80 object-cover filter brightness-50" />
-    <div class="mx-52 bg-slate-300 shadow-2xl">
+    <div class="lg:mx-52 bg-slate-300 shadow-2xl   ">
         <h2 class="text-2xl text-center py-5 font-bold">{{ titre }}</h2>
 
         <div class="flex">
@@ -75,7 +75,7 @@ const route = useRoute('/celebrite/[id]');
 
             <h2 class="text-2xl text-center py-5 mx-4 font-bold ">Casting</h2>
 
-            <ul class="flex justify-center">
+            <ul class="grid lg:grid-cols-5 sm:grid-cols-2">
                 <li class="m-4 " v-for="uneCelebrite in celebrite">
                     <RouterLink :to="{ name: '/celebrite/[id]', params: { id: uneCelebrite.id } }">
                         <img :src="uneCelebrite?.image ?? undefined"
