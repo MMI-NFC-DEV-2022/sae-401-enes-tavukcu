@@ -41,9 +41,9 @@ const tableauFilm = data ?? [];
     
 
 
-            <div class="flex flex-wrap justify-center gap-8 py-20 px-20">
+            <div class="grid lg:grid-cols-3 justify-center gap-2 py-20 px-20 ">
                 <!-- <div class="grid grid-cols-4 gap-1 justify-center py-20 "> -->
-                <AfficheFilm v-for="film in tableauFilm" v-bind="film" />
+                <AfficheFilm v-for="film in tableauFilm" v-bind="film" class="m-auto" />
 
             </div>
             <!-- </div> -->
