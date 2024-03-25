@@ -37,7 +37,7 @@
       <div class="p-2 pt-10 space-y-4 sm:px-3">
         <RouterLink to="/" class="block text-white hover:text-gray-300">Accueil</RouterLink>
         <RouterLink to="/films" class="block text-white hover:text-gray-300">Films</RouterLink>
-        <RouterLink to="/fimls/edit" class="block text-white hover:text-gray-300">Célébrités</RouterLink>
+        <RouterLink to="/celebrite" class="block text-white hover:text-gray-300">Célébrités</RouterLink>
         <RouterLink to="/films/edit/" class="block text-white hover:text-gray-300">Ajouter un film</RouterLink>
 
         <RouterLink to="/login-logout" class="block text-white hover:text-gray-300">Connexion</RouterLink>

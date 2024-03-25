@@ -20,9 +20,10 @@ const route = useRoute('/realisateur/[id]');
         <div class="bg-slate-400 lg:mx-72  pt-32">
             <h2 class="text-center text-xl lg:text-2xl font-bold pb-10">{{ prenom }} {{ nom }}</h2>
             <div class="flex items-center justify-around">
-                <img :src="image ?? undefined" class="  object-cover  w-48 h-64 " alt="affiche du film" />
+                <img :src="image ?? undefined" class="  object-cover  w-32 h-40 lg:w-48 lg:h-64 "
+                    alt="affiche du film" />
 
-                <div class="space-y-4">
+                <div class="space-y-4 lg:text-2xl text-sm">
                     <p> <b>Age :</b> : {{ age }}</p>
                     <p> <b>Pays :</b> {{ pays }}</p>
                     <p> <b>Nombres de films réalisé :</b> {{ nb_films }}</p>

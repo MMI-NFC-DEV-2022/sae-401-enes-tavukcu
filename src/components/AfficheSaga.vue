@@ -5,6 +5,7 @@ import type { Database, Tables } from '@/supabase(2)';
 // import type { TypesFilm } from '@/types';
 // defineProps<TypesFilm>();
 import { supabase } from '@/supabase';
+import AfficheFilm from './AfficheFilm.vue';
 defineProps<Database["public"]["Tables"]["saga"]["Row"] & { films: Tables<'films'>[] }>()
 const route = useRoute('/celebrite/[id]');
 
@@ -27,11 +28,13 @@ const route = useRoute('/celebrite/[id]');
 
         <p class="text-center font-semibold text-lg">Films</p>
 
-        <ul class="grid grid-cols-2">
+        <ul class="grid grid-cols-2 lg:grid-cols-3 lg:px-40">
             <li class="m-4" v-for="unFilm in films">
                 <RouterLink :to="{ name: '/films/[id]', params: { id: unFilm.id } }">
-                    <img :src="unFilm?.affiche ?? undefined" class="w-44 h-60 object-cover m-auto " />
+                    <img :src="unFilm?.affiche ?? undefined" class="w-44 h-60 lg:w-64 lg:h-96 object-cover m-auto " />
+                    <p class="text-center font-semibold">{{ unFilm.titre }}</p>
                 </RouterLink>
+                
             </li>
         </ul>
 
