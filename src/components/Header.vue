@@ -1,13 +1,11 @@
 <template>
-  <nav class="z-50 bg-black bg-opacity-85 backdrop-filter backdrop-blur-md w-full  p-4 fixed">
+  <nav class="z-50 bg-black bg-opacity-85 backdrop-filter backdrop-blur-sm w-full  p-4 fixed">
     <div class="flex justify-between items-center">
       <div class="flex-shrink-0">
         <!-- Remplacez "chemin/vers/mon-logo.png" par le chemin de votre logo -->
         <div class="flex-shrink-0">
           <a href="/" class="text-white text-lg font-semibold">FilmET</a>
         </div>
-
-
       </div>
       <div class="md:hidden">
         <!-- Hamburger icon -->
@@ -26,7 +24,11 @@
           <RouterLink to="/films" class="text-white hover:text-gray-300">Films</RouterLink>
           <RouterLink to="/celebrite" class="text-white hover:text-gray-300">Célébrités</RouterLink>
           <RouterLink to="/films/edit/" class="text-white hover:text-gray-300">Ajouter un film</RouterLink>
+
           <RouterLink to="/login-logout" class="text-white hover:text-gray-300">Connexion</RouterLink>
+          
+          
+
         </div>
       </div>
     </div>
@@ -36,6 +38,8 @@
         <RouterLink to="/" class="block text-white hover:text-gray-300">Accueil</RouterLink>
         <RouterLink to="/films" class="block text-white hover:text-gray-300">Films</RouterLink>
         <RouterLink to="/fimls/edit" class="block text-white hover:text-gray-300">Célébrités</RouterLink>
+        <RouterLink to="/films/edit/" class="block text-white hover:text-gray-300">Ajouter un film</RouterLink>
+
         <RouterLink to="/login-logout" class="block text-white hover:text-gray-300">Connexion</RouterLink>
       </div>
     </div>

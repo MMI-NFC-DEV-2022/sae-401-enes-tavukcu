@@ -14,7 +14,7 @@ console.log("supabase :", supabase);
       <div class="absolute inset-0 bg-black opacity-60"></div>
     </div>
 
-    <div class="lg:px-72 pb-3 mb-5 bg-slate-500">
+    <div class="lg:px-72 pb-3 mb-5 ">
 
       <h1 class="text-center italic lg:text-2xl font-bold lg:py-8 py-6 ">Bienvenue sur Film ET !</h1>
 

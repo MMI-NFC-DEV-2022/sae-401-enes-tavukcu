@@ -24,13 +24,11 @@ if (route.params.id) {
 
 <template>
     <div>
-        <div class="pt-20">
-            <h2 class="text-2xl">
-                Résultat (Prévisualisation)
-            </h2>
+        <div class="pt-20 flex justify-center">
+
             <AfficheFilm v-bind="films" />
         </div>
-        <div class="p-2">
+        <div class="p-2 flex justify-center">
             <FormKit @submit="upsertFilm" type="form" v-model="films" :config="{
                 classes: {
                     input: 'p-1 rounded border-gray-300 shadow-sm border',
@@ -39,9 +37,11 @@ if (route.params.id) {
                 },
             }">
                 <FormKit name="titre" label="Titre du film" />
-                <FormKit name="synopsis" label="Description du film" />
+                <FormKit name="date_sortie" label="Date de sortie" />
+
+                <FormKit name="synopsis" label="Synopsis du film" />
                 <FormKit name="note" type="number" label="Note /5" />
-                <FormKit name="affiche" label="Images du film" />
+                <FormKit name="affiche" label="Image du film" />
             </FormKit>
         </div>
     </div>

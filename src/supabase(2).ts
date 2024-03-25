@@ -61,16 +61,19 @@ export type Database = {
         Row: {
           film: number
           prix: string | null
+          redirect: string | null
           site_achat: number
         }
         Insert: {
           film: number
           prix?: string | null
+          redirect?: string | null
           site_achat: number
         }
         Update: {
           film?: number
           prix?: string | null
+          redirect?: string | null
           site_achat?: number
         }
         Relationships: [
@@ -379,29 +382,29 @@ export type Database = {
         Row: {
           age: number | null
           id: number
+          image: string | null
           nb_films: number | null
           nom: string
           pays: string | null
           prenom: string | null
-          image: string | null
         }
         Insert: {
           age?: number | null
           id?: number
+          image?: string | null
           nb_films?: number | null
           nom: string
           pays?: string | null
           prenom?: string | null
-          image?: string | null
         }
         Update: {
           age?: number | null
           id?: number
+          image?: string | null
           nb_films?: number | null
           nom?: string
           pays?: string | null
           prenom?: string | null
-          image?: string | null
         }
         Relationships: []
       }
