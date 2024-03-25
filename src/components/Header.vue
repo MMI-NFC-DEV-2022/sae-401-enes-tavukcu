@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 <template>
-  <nav class="absolute z-50 bg-gradient-to-b from-black via-transparent to-transparent w-full h-32 py-4 px-4 ">
+  <nav class=" z-50 bg-black bg-opacity-85 backdrop-filter backdrop-blur-md w-full h-16 py-4 px-4 fixed">
     <div class="flex justify-between items-center">
       <div class="flex-shrink-0">
         <a href="/" class="text-white text-lg font-semibold">FilmET</a>

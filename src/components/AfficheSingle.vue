@@ -61,7 +61,7 @@ const route = useRoute('/celebrite/[id]');
 
                 <p v-for="film_saga in saga">
                     <RouterLink :to="{ name: '/saga/[id]', params: { id: film_saga.id } }">
-                        <b>Saga : </b>{{ film_saga.libelle }}
+                        <b>Saga : </b> <em class="text-blue-600">{{ film_saga.libelle }}</em>
                     </RouterLink>
                 </p>
             </div>

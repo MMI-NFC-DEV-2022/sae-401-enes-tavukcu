@@ -17,7 +17,12 @@ const route = useRoute('/celebrite/[id]');
 
 <template>
     <div>
-        <img :src="banner ?? undefined" class="w-full h-60 object-cover " />
+        <div class="relative">
+            <img :src="banner ?? undefined" class="w-full h-60 lg:h-72 object-cover " />
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+
+        </div>
+
         <h2 class=" text-center font-bold text-2xl py-4">{{ libelle }}</h2>
 
         <p class="text-center font-semibold text-lg">Films</p>
